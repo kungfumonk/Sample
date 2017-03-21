@@ -5,6 +5,7 @@ MVC sample
 ~connectionStrings>
 
  ~add name="DefaultConnection" connectionString="Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseName.mdf;Integrated Security=True" providerName="System.Data.SqlClient" />
+ 
  ~connectionStrings>
 
 ///////////////////// PUT THESE TWO LINES IN INIT METHOD ///////////////////////////
