@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
-public class ContactModel
+public class Model
     {
         
         [Required]
@@ -30,7 +30,7 @@ public class ContactModel
         public List<String> StateList { get; set; }
 
         
-        public ContactModel(String pFirstName, String pLastName, String pState, String pEmail)
+        public Model(String pFirstName, String pLastName, String pState, String pEmail)
         {
             FirstName = pFirstName;
             LastName = pLastName;
@@ -44,7 +44,7 @@ public class ContactModel
 
         }
 
-        public ContactModel()
+        public Model()
         {
             if (StateList == null)
             {
