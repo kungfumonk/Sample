@@ -9,15 +9,10 @@ public ActionResult Index()
   return View(model);
 }
 
-/// <summary>
-/// Indexes the specified model.
-/// </summary>
-/// <param name="model">The model.</param>
-/// <returns></returns>
 [HttpPost]
-public ActionResult Index(ContactModel model)
+public ActionResult Index(Model model)
 {
-  model.StateList = ContactService.GetStates();
+  model.StateList = Service.GetStates();
   if (ModelState.IsValid)
   {
       Request req = new Request(model.FirstName, model.LastName);
@@ -25,7 +20,7 @@ public ActionResult Index(ContactModel model)
       Service API = new Service();
       Results results = API.methodCall(req);
 
-      MailAddress From = new MailAddress("cr4p100@gmail.com", "donotreply");
+      MailAddress From = new MailAddress("asdf@gmail.com", "donotreply");
       MailAddress To = new MailAddress("xxxxxxxx@gmail.com", "Records");
       MailMessage Message = new MailMessage(From, To);
       Message.Subject = "Contact Info";
@@ -38,7 +33,7 @@ public ActionResult Index(ContactModel model)
           EnableSsl = true,
           DeliveryMethod = SmtpDeliveryMethod.Network,
           UseDefaultCredentials = false,
-          Credentials = new System.Net.NetworkCredential("cxxxxxxxx@gmail.com", "password")
+          Credentials = new System.Net.NetworkCredential("asdf@gmail.com", "password")
       };
 
       try
