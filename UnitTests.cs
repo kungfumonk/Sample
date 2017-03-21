@@ -11,7 +11,7 @@ public class TestCases
       String DataDirectory = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\App_Data"));
       AppDomain.CurrentDomain.SetData("DataDirectory", DataDirectory);
 
-      Request = new Request("Test", "Test", "Tester", "111 Test Dr.", "Test", "Michigan", "48532", "Test@Test.com", "", "");
+      Request = new Request("Test", "Test", "Tester", "111 Test Dr.", "Test", "HI", "99999", "Test@Test.com", "", "");
 
   }
 
